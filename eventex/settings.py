@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+#TEST GITHUB/DEPLOY HEROKU
+
 import os
 from pathlib import Path
 from decouple import Csv, config
