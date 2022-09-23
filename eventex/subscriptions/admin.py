@@ -1,3 +1,4 @@
+from datetime import date
 from django.contrib import admin
 from django.utils.timezone import now
 from eventex.subscriptions.models import Subscription
@@ -12,7 +13,8 @@ class SubscripitonModelAdmin(admin.ModelAdmin):
 
 
     def subscribed_today(self, obj):
-        return obj.created_at == now().date()
+        return obj.created_at.date() == now().date()
+
 
     subscribed_today.short_description = 'inscrito hoje?'
     subscribed_today.boolean = True
